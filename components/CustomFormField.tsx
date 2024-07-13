@@ -128,18 +128,20 @@ import { Checkbox } from "./ui/checkbox";
         case FormFieldType.SKELETON:
             return props.renderSkeleton ? props.renderSkeleton(field) : null;
         case FormFieldType.CHECKBOX:
-            <FormControl>
-                <div className="flex items-center gap-4">
-                    <Checkbox
-                       id={props.name}
-                       checked={field.value}
-                       onCheckedChange={field.onCHange} 
-                    />
-                    <label htmlFor={props.name} className="checkbox-label">
-                        {props.label}
-                    </label>
-                </div>
-            </FormControl>
+            return (
+                <FormControl>
+                    <div className="flex items-center gap-4">
+                        <Checkbox
+                        id={props.name}
+                        checked={field.value}
+                        onCheckedChange={field.onChange} 
+                        />
+                        <label htmlFor={props.name} className="checkbox-label">
+                            {props.label}
+                        </label>
+                    </div>
+                </FormControl>
+            )
         default:
             break;
     }
