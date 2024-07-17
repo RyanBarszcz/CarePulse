@@ -34,7 +34,6 @@ export const PasskeyModal = () => {
 
   useEffect(() => {
     const accessKey = encryptedKey && decryptKey(encryptedKey);
-    console.log('here')
 
     if (path) {
       if (accessKey === process.env.NEXT_PUBLIC_ADMIN_PASSKEY) {
@@ -121,4 +120,4 @@ export const PasskeyModal = () => {
   );
 };
 
-export default PasskeyModal;
+export default PasskeyModal; 
